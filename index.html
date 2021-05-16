@@ -31,15 +31,17 @@
 
         <div class="ml-auto">
             <a>
-                <i class="fa fa-pause text-white" style="font-size: 25pt" aria-hidden="true"></i>
+                <i id="pause" class="fa fa-pause text-white" style="font-size: 25pt; display: none;"
+                    aria-hidden="true"></i>
             </a>
 
             <a>
-                <i class="fa fa-play text-white" style="font-size: 25pt" aria-hidden="true"></i>
+                <i id="play" class="fa fa-play text-white" style="font-size: 25pt; display: none;"
+                    aria-hidden="true"></i>
             </a>
         </div>
 
-        <audio src="./audio/lo-fi.mp3" type="audio/mpeg"></audio>
+        <audio id="lofi" src="./audio/lo-fi.mp3" type="audio/mpeg"></audio>
 
     </nav>
     <!--MENU-->
@@ -65,6 +67,7 @@
                                     <input type="number"
                                         class="form-control form-control-bg bg-dark border-0 shadow text-white"
                                         id="acao">
+                                    <small class="text-danger" id="erro_acao"></small>
                                     <!--form-control-bg: deixa maior-->
                                 </div>
                             </div>
@@ -76,6 +79,8 @@
                                     <input type="number"
                                         class="form-control form-control-bg bg-dark border-0 shadow text-white"
                                         id="pausa">
+                                    <small class="text-danger" id="erro_pausa"></small>
+
                                 </div>
                             </div>
 
@@ -86,6 +91,8 @@
                                     <input type="number"
                                         class="form-control form-control-bg bg-dark border-0 shadow text-white"
                                         id="acao">
+                                    <small class="text-danger" id="erro_sessoes"></small>
+
                                 </div>
                             </div>
                         </div>
@@ -95,7 +102,8 @@
 
                         <div class="row mt-5 mb-5 d-flex justify-content-center">
                             <div class="col-md-9">
-                                <button class="btn btn-danger shadow btn-lg btn-block">Iniciar</button>
+                                <button onclick="iniciar()"
+                                    class="btn btn-danger shadow btn-lg btn-block">Iniciar</button>
                             </div>
                         </div>
 
@@ -113,22 +121,24 @@
 
         <div id="timer" class="mt-0 d-flex justify-content-center" style="display: none;">
 
-
-                <div class="row shadown time">
-                    <div class="col-5 p-0">
-                        <h2 id="minutes_ok"></h2>
-                    </div>
-
-                    <div class="col-1 p-0 d-flex justify-content-center">
-                        <h2>:</h2>
-                    </div>
-
-                    <div class="col-5 pl-">
-                        <h2 id="seconds_ok"></h2>
-                    </div>
+        <!--RELOGIO-->
+            <div class="row shadow time">
+                <div class="col-5 p-0">
+                    <h2 id="minutes_ok"></h2>
                 </div>
 
-        <!--
+                <div class="col-1 p-0 d-flex justify-content-center">
+                    <h2>:</h2>
+                </div>
+
+                <div class="col-5 pl-">
+                    <h2 id="seconds_ok"></h2>
+                </div>
+            </div>
+            <!--RELOGIO-->
+
+
+            <!--
             <div class="row mg-3">
                 <div class="col">
                     <h3 id="title" class="text-center"></h3>
