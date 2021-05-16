@@ -47,50 +47,115 @@
 
     <!--CONTAINER-->
     <div class="container">
-        <div class="row d-flex justify-content-center">
+        <!--CONFIG-->
+        <div class="row d-flex justify-content-center mt-5 mb-5">
+            <!--mt: margin top e mb: margin button-->
             <div class="col-md-8">
                 <!--OBS: Para o comando col-md-8 funcionar, ele tem que estar dentro de uma row, caso contrario, não funciona-->
 
-                <!--CONFIG-->
                 <div id="config" class="row d-flex justify-content-center">
                     <div class="col">
+
+                        <!--inputs-->
                         <div class="row d-flex justify-content-center">
-
-                            <div class="form-group">
-                                <label for="acao">Ação</label>
-                                <input type="number" class="form-control" id="acao">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="d-flex justify-content-center text-white font-weight-bold"
+                                        for="acao">Ação</label>
+                                    <input type="number"
+                                        class="form-control form-control-bg bg-dark border-0 shadow text-white"
+                                        id="acao">
+                                    <!--form-control-bg: deixa maior-->
+                                </div>
                             </div>
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="pausa">Pausa</label>
-                                    <input type="number" class="form-control" id="pausa">
+                                    <label class="d-flex justify-content-center text-white font-weight-bold"
+                                        for="pausa">Pausa</label>
+                                    <input type="number"
+                                        class="form-control form-control-bg bg-dark border-0 shadow text-white"
+                                        id="pausa">
                                 </div>
-
                             </div>
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="sessões">Sessões</label>
-                                    <input type="number" class="form-control" id="acao">
+                                    <label class="d-flex justify-content-center text-white font-weight-bold"
+                                        for="sessões">Sessões</label>
+                                    <input type="number"
+                                        class="form-control form-control-bg bg-dark border-0 shadow text-white"
+                                        id="acao">
                                 </div>
-
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="acao">Ação</label>
-                                    <input type="number" class="form-control" id="acao">
-                                </div>
-
                             </div>
                         </div>
+                        <!--inputs-->
+
+                        <!--Botão iniciar-->
+
+                        <div class="row mt-5 mb-5 d-flex justify-content-center">
+                            <div class="col-md-9">
+                                <button class="btn btn-danger shadow btn-lg btn-block">Iniciar</button>
+                            </div>
+                        </div>
+
+                        <!--Botão iniciar-->
+
+
                     </div>
                 </div>
-                <!--CONFIG-->
 
             </div>
         </div>
+        <!--CONFIG-->
+
+        <!--TiMER-->
+
+        <div id="timer" class="mt-0 d-flex justify-content-center" style="display: none;">
+
+
+                <div class="row shadown time">
+                    <div class="col-5 p-0">
+                        <h2 id="minutes_ok"></h2>
+                    </div>
+
+                    <div class="col-1 p-0 d-flex justify-content-center">
+                        <h2>:</h2>
+                    </div>
+
+                    <div class="col-5 pl-">
+                        <h2 id="seconds_ok"></h2>
+                    </div>
+                </div>
+
+        <!--
+            <div class="row mg-3">
+                <div class="col">
+                    <h3 id="title" class="text-center"></h3>
+                </div>
+            </div>
+        -->
+
+            <div class="row mg-3">
+                <div class="col">
+                    <h3 id="title_sessao" class="text-center text-secondary"></h3>
+                </div>
+            </div>
+        </div>
+        <!--TiMER-->
+
+        <!--FINALIZAÇÃO-->
+        <div class="fim" style="display: none;">
+            <h1 class="text-success text-center"> Parábens! Você finalizou suas tarefas.</h1>
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+                <div class="col-md-9 d-flex justify-content-center">
+                    <a href="./index.html" class="btn btn-danger shadow btn-lg">Inicio</a>
+                </div>
+            </div>
+        </div>
+
+        <!--FINALIZAÇÃO-->
+
     </div>
     <!--CONTAINER-->
 
