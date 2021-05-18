@@ -42,7 +42,14 @@ input[type="number"] {
 
 }
 
+/*document.getElementById("timer").style.setProperty("display", "none", "important")*/
 
 h2{
     font-size: 90pt;
+}
+
+#timer{
+
+    display:none !important;
+
 }
