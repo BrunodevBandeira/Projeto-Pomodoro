@@ -1,56 +1,45 @@
-/**/
+/* Zerar as configurações padrões do navegador */
 *{
     padding: 0;
     margin: 0;
-
-/*Por padrão o navegador já tem margin e padding, porem passamos as nossas para prevenir erros*/
-}
-
-input{
-    /*É AQUI QUE DEIXAMOS OS UNPUTS RETANGURALES*/
-    width: 150px !important; /*Sempre que alterarmos algun input, que tem classe do bootstrap, precisamos utilizar o important, para forçar o css a configurar o q desejamos*/
-
+ }
+ 
+ /* O !important serve para priorizar essa configuração especifica */
+ input{
+    width: 150px !important;
     height: 150px !important;
     font-size: 50pt !important;
     text-align: center !important;
-}
-
-
-input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
-     /*webkit: serve para funcionar em qualquer navegador e tambem, tira aquela aba de escolha que vem no imput*/
-     -webkit-appearance: none;
-     margin: 0;
-}
-
-
-input[type="number"] {
-    /*Isso é especifico do mozila - mas não foi bem explicado*/
+ }
+ 
+ /* Tirar o botão de mais e menos do input tipo number */
+ input[type="number"]::-webkit-outer-spin-button,
+ input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+ }
+ 
+ input[type="number"] {
     -moz-appearance: none;
-}
-
-
-.time{
-
+ }
+ 
+ .time{
     color: #fff;
     text-align: center;
     width: 20rem;
     height: 20rem;
     border-radius: 10rem;
     display: flex;
-    justify-content: center;/* Tem um efeito horizontal */
-    align-items: center;/* Tem um efeito vertical */
-    margin: auto !important; 
-
-}
-
-/*document.getElementById("timer").style.setProperty("display", "none", "important")*/
-
-h2{
+    justify-content: center;
+    align-items: center;
+    margin: auto !important;
+ }
+ 
+ h2{
     font-size: 90pt;
-}
-
-#timer{
-
-    display:none !important;
-
-}
+ }
+ 
+ #timer{
+    display: none !important;
+ }
+ 
