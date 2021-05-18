@@ -30,12 +30,12 @@
         <a class="navbar-brand font-weight-bold text-white" href="index.html">Timer Pomodoro</a>
 
         <div class="ml-auto">
-            <a>
+            <a onclick="pausar()">
                 <i id="pause" class="fa fa-pause text-white" style="font-size: 25pt; display: none;"
                     aria-hidden="true"></i>
             </a>
 
-            <a>
+            <a onclick="executar()">
                 <i id="play" class="fa fa-play text-white" style="font-size: 25pt; display: none;"
                     aria-hidden="true"></i>
             </a>
@@ -60,7 +60,7 @@
 
                         <!--inputs-->
                         <div class="row d-flex justify-content-center">
-                            <div class="col-md-3">
+                            <div class="col-md-3 d-flex justify-content-center">
                                 <div class="form-group">
                                     <label class="d-flex justify-content-center text-white font-weight-bold"
                                         for="acao">Ação</label>
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-3 d-flex justify-content-center">
                                 <div class="form-group">
                                     <label class="d-flex justify-content-center text-white font-weight-bold"
                                         for="pausa">Pausa</label>
@@ -84,7 +84,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-3 d-flex justify-content-center">
                                 <div class="form-group">
                                     <label class="d-flex justify-content-center text-white font-weight-bold"
                                         for="sessões">Sessões</label>
@@ -145,7 +145,7 @@
             <!--RELOGIO-->
 
 
-            <div class="row mg-3">
+            <div class="row mt-5">
                 <div class="col">
                     <h3 id="title_sessao" class="text-center text-secondary"></h3>
                 </div>
